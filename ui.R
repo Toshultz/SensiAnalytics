@@ -1,5 +1,5 @@
 library(shiny)
-
+library(ggvis)
 shinyUI(fluidPage(
   
   # Application title

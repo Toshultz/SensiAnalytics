@@ -1,3 +1,4 @@
+library(shinyapps)
 library(shiny)
 library(data.table)
 library(tidyr)
@@ -69,10 +70,11 @@ shinyServer(function(input, output, session) {
     #needed dirname when running from local machine, now try to move everything to AWS
     # dirname = "/Users/tylershultz/Desktop/BasicWebpage/"
     
-    dirname = ""
-    inFile <<- paste(dirname, names(query), sep = "")
+    # dirname = ""
+    # inFile <<- paste(dirname, names(query), sep = "")
+    getInfo <- names(query)
+    inFile <<-getInfo[1]
     firstUpload <<- TRUE
-    print(paste("in queryText, firstUpload = ", firstUpload))
     print(paste("in queryText, inFile = ", inFile))
   })
  
